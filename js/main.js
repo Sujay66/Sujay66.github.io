@@ -220,9 +220,20 @@
 	------------------------------------------------------ */
 
 	/* local validation */
-	$('#contactForm').validate({
+    $("#contactForm").validate({
+        rules: {
+            field: {
+                required: true,
+                email: true,
+				contactName: true,
+				contactSubject: true,
+				contactMessage: true
+            }
+        }
+    });
+/*	$('#contactForm').validate({
 
-		/* submit via ajax */
+		/!* submit via ajax *!/
 		submitHandler: function(form) {
 
 			var sLoader = $('#submit-loader');
@@ -265,7 +276,7 @@
 	      });     		
   		}
 
-	});
+	});*/
 
 
  	/*----------------------------------------------------- */
